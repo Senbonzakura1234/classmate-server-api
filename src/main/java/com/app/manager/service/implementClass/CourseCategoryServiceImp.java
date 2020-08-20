@@ -47,6 +47,7 @@ public class CourseCategoryServiceImp implements CourseCategoryService {
                 if(category == null){
                     var newCategory = new CourseCategory();
                     newCategory.setName(name);
+                    newCategory.setDescription(name);
                     coursecategoryRepository.save(newCategory);
                 }
             } catch (Exception e) {

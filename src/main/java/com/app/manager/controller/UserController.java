@@ -27,7 +27,7 @@ import java.util.List;
 
 @SuppressWarnings("SpringJavaAutowiredFieldsWarningInspection")
 @Controller
-public class AuthenController {
+public class UserController {
     @Autowired private UserRoleService userRoleService;
     @Autowired private UserService userService;
     @Autowired private PasswordEncoder encoder;
@@ -79,7 +79,7 @@ public class AuthenController {
         roleService.generateRoles();
         subscriptionService.generateSubscription();
         courseCategoryService.generateCategory();
-        
+
         if(SecurityContextHolder.getContext().getAuthentication() != null &&
                 SecurityContextHolder.getContext().getAuthentication().isAuthenticated() &&
                 //when Anonymous Authentication is enabled
