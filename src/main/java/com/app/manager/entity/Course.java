@@ -18,18 +18,18 @@ public class Course {
     )
     private String id;
 
-    @Column(name = "courseCategoryId")
-    private String courseCategoryId;
+    @Column(name = "coursecategoryid")
+    private String coursecategoryid; //update
 
     @ManyToOne
-    @JoinColumn(name = "courseCategoryId", updatable = false, insertable = false)
-    private CourseCategory courseCategory;
+    @JoinColumn(name = "coursecategoryid", updatable = false, insertable = false)
+    private CourseCategory coursecategory;
 
-    @Column(name = "userId")
-    private String userId;
+    @Column(name = "userid")
+    private String userid;
 
     @ManyToOne
-    @JoinColumn(name = "userId", updatable = false, insertable = false)
+    @JoinColumn(name = "userid", updatable = false, insertable = false)
     private User user;
 
     @OneToMany(mappedBy = "course")
@@ -41,24 +41,24 @@ public class Course {
 
     @NotBlank
     @Column(name = "name", nullable = false)
-    private String name;
+    private String name; //update
 
     @Column(name = "description", nullable = false)
-    private String description;
+    private String description; //update
 
     @Column(name = "startdate", nullable = false)
-    private Long startdate;
+    private Long startdate; //update
 
     @Column(name = "enddate", nullable = false)
-    private Long enddate;
+    private Long enddate; //update
 
 
 
     @Column(name = "status", nullable = false)
-    private StatusEnum status;
+    private StatusEnum status; //update
 
     @Column(name = "createdat", nullable = false)
-    private Long createdat;
+    private Long createdat; //update
 
     @Column(name = "updatedat", nullable = false)
     private Long updatedat;
@@ -136,28 +136,28 @@ public class Course {
         this.deletedat = deletedat;
     }
 
-    public String getCourseCategoryId() {
-        return courseCategoryId;
+    public String getCoursecategoryid() {
+        return coursecategoryid;
     }
 
-    public void setCourseCategoryId(String courseCategoryId) {
-        this.courseCategoryId = courseCategoryId;
+    public void setCoursecategoryid(String courseCategoryId) {
+        this.coursecategoryid = courseCategoryId;
     }
 
-    public CourseCategory getCourseCategory() {
-        return courseCategory;
+    public CourseCategory getCoursecategory() {
+        return coursecategory;
     }
 
-    public void setCourseCategory(CourseCategory courseCategory) {
-        this.courseCategory = courseCategory;
+    public void setCoursecategory(CourseCategory courseCategory) {
+        this.coursecategory = courseCategory;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getUserid() {
+        return userid;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setUserid(String userId) {
+        this.userid = userId;
     }
 
     public User getUser() {
@@ -198,5 +198,21 @@ public class Course {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Long getStartdate() {
+        return startdate;
+    }
+
+    public void setStartdate(Long startdate) {
+        this.startdate = startdate;
+    }
+
+    public Long getEnddate() {
+        return enddate;
+    }
+
+    public void setEnddate(Long enddate) {
+        this.enddate = enddate;
     }
 }
